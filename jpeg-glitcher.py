@@ -41,7 +41,7 @@ shutil.copy(inputfile, outputfile)
 
 glitch = [random.randint(0, 0xfe)]
 j=0;
-num = random.randint(30, 60);
+num = random.randint(10, 30);
 while (j < num):
     by = random.randint(0, 0xfe)
     glitch.append(by)
@@ -54,7 +54,7 @@ k=0
 
 while(count < frames):
     j=0;
-    num = random.randint(0, 30);
+    num = random.randint(1, 30);
     while (j < num):
         by = random.randint(0, 0xfe)
         glitch.append(by)

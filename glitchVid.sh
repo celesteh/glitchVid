@@ -10,6 +10,7 @@ echo "./ $working"
 jpeg=$working/$1
 echo "jpeg $jpeg"
 
+mkdir /tmp/vid
 jout="/tmp/vid/jout.jpg"
 
 convert $jpeg    -resize 866x866\>  $jout
@@ -19,6 +20,6 @@ echo "audio $audio"
 
 python $dir/jpeg-glitcher.py $jout $audio "/tmp/vid"
 
-ffmpeg  -i /tmp/vid/frame-%d-jout.jpg.jpg -i $2 -r 12 -vcodec mpeg4  $audio.avi
+ffmpeg  -i /tmp/vid/frame-%d-jout.jpg.jpg  -i $2 -vcodec mpeg4  $audio.avi
 
 rm /tmp/vid/*
