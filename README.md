@@ -6,4 +6,4 @@ Requires: ffmpeg, ImageMagick
 
 usage:
 
-glitchVid.sh foo.jpf bar.aiff
+glitchVid.sh foo.jpg bar.aiff
