@@ -16,11 +16,12 @@ audiofile = aifc.open(audiofile)
 #duration = audiofile.getnframes() / audiofile.getnchannels() / audiofile.getframerate()
 duration = audiofile.getnframes()  / audiofile.getframerate()
 frames = duration * 25
-frames = frames + 2
+frames = int(frames + 2)
 
-farr = range(frames+1)
-farr = farr[1:(frames+1)]
-random.shuffle(farr)
+farr = range(1, frames+1)
+#farr = farr[1:(frames+1)]
+#random.shuffle(farr)
+farr = random.sample(farr, k=len(farr))
 #print(farr)
 
 insize = os.path.getsize(inputfile)
